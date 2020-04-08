@@ -32,6 +32,11 @@ def property_edit(request, pk):
         form = PropertyForm(instance=property)
     return render(request, 'Rental_hub/edit_property_form.html', {'form': form})
 
+def property_delete(request, pk):
+    Property.objects.get(id=pk).delete()
+    return redirect('properties_list')
+
+
 def tenant_list(request):
     tenants = Tenant.objects.all()
     return render(request, 'Rental_hub/tenants_list.html', {'tenants': tenants })
@@ -60,3 +65,7 @@ def tenant_edit(request, pk):
     else:
         form = TenantForm(instance=tenant)
     return render(request, 'Rental_hub/edit_tenant_form.html', {'form': form})
+
+def tenant_delete(request, pk):
+    Tenant.objects.get(id=pk).delete()
+    return redirect('tenant_list')

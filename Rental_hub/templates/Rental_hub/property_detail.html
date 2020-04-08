@@ -6,14 +6,8 @@
 
 <img src="{{ property.photo_url }}" alt="" class="artist-photo">
 
-
-<ul>
-    
-    <li>
-
-        
-        </a>
-    </li>
+</br>
+<a href="{% url 'property_delete' pk=property.pk %}"><button>Delete Property</button></a>
     
 </ul>
 {% endblock %}

@@ -11,6 +11,6 @@ urlpatterns = [
     path('tenants/new', views.tenant_create, name='tenant_create'),
     path('tenants/<int:pk>/edit', views.tenant_edit, name='tenant_edit'),
     path('properties/<int:pk>/edit', views.property_edit, name='property_edit'),
-    # path('artists/<int:pk>/delete', views.artist_delete, name='artist_delete'),
-    # path('songs/<int:pk>/delete', views.song_delete, name='song_delete')
+    path('tenants/<int:pk>/delete', views.tenant_delete, name='tenant_delete'),
+    path('properties/<int:pk>/delete', views.property_delete, name='property_delete')
 ]

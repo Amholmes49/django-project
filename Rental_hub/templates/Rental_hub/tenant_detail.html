@@ -3,6 +3,6 @@
 {% block content %}
 <h2>{{ tenant.full_name }} <a href=>(edit)</a></h2>
 <h3></h3>
-
+<a href="{% url 'tenant_delete' pk=tenant.pk %}"><button>Delete Tenant</button></a>
 
 {% endblock %}
