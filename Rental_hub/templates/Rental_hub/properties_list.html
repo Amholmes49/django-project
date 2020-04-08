@@ -5,7 +5,7 @@
 <ul>
     {% for property in properties %}
     <li>
-        
+        <a href="{% url 'property_detail' pk=property.pk %}">
             {{ property.name }}
         </a>
     </li>

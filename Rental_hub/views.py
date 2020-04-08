@@ -8,8 +8,12 @@ def properties_list(request):
 
 def property_detail(request, pk):
     property = Property.objects.get(id=pk)
-    return render(request, 'nostaldja/decade_detail.html', {'property': property })
+    return render(request, 'Rental_hub/property_detail.html', {'property': property })
 
 def tenant_list(request):
     tenants = Tenant.objects.all()
     return render(request, 'Rental_hub/tenants_list.html', {'tenants': tenants })
+
+def tenant_detail(request, pk):
+    tenant = Tenant.objects.get(id=pk)
+    return render(request, 'Rental_hub/tenant_detail.html', {'tenant': tenant})

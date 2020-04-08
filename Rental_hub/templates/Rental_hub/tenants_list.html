@@ -5,7 +5,7 @@
 <ul>
     {% for tenant in tenants %}
     <li>
-        
+        <a href="{% url 'tenant_detail' pk=tenant.pk %}">
             {{ tenant.full_name }}
         </a>
     </li>
