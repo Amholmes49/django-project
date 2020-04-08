@@ -21,16 +21,16 @@ def property_create(request):
         form = PropertyForm()
     return render(request, 'Rental_hub/property_form.html', {'form': form})
 
-# def property_edit(request, pk):
-#     tenant = Tenant.objects.get(pk=pk)
-#     if request.method == "POST":
-#         form = TenantForm(request.POST, instance=tenant)
-#         if form.is_valid():
-#             tenant = form.save()
-#             return redirect('tenant_detail', pk=tenant.pk)
-#     else:
-#         form = TenantForm(instance=tenant)
-#     return render(request, 'Rental_hub/tenant_form.html', {'form': form})
+def property_edit(request, pk):
+    property = Property.objects.get(pk=pk)
+    if request.method == "POST":
+        form = PropertyForm(request.POST, instance=property)
+        if form.is_valid():
+            tenant = form.save()
+            return redirect('property_detail', pk=property.pk)
+    else:
+        form = PropertyForm(instance=property)
+    return render(request, 'Rental_hub/edit_property_form.html', {'form': form})
 
 def tenant_list(request):
     tenants = Tenant.objects.all()
@@ -50,13 +50,13 @@ def tenant_create(request):
         form = TenantForm()
     return render(request, 'Rental_hub/tenant_form.html', {'form': form})
 
-# def tenant_edit(request, pk):
-#     tenant = Tenant.objects.get(pk=pk)
-#     if request.method == "POST":
-#         form = TenantForm(request.POST, instance=tenant)
-#         if form.is_valid():
-#             tenant = form.save()
-#             return redirect('tenant_detail', pk=tenant.pk)
-#     else:
-#         form = TenantForm(instance=tenant)
-#     return render(request, 'Rental_hub/tenant_form.html', {'form': form})
+def tenant_edit(request, pk):
+    tenant = Tenant.objects.get(pk=pk)
+    if request.method == "POST":
+        form = TenantForm(request.POST, instance=tenant)
+        if form.is_valid():
+            tenant = form.save()
+            return redirect('edit_tenant_detail', pk=tenant.pk)
+    else:
+        form = TenantForm(instance=tenant)
+    return render(request, 'Rental_hub/edit_tenant_form.html', {'form': form})

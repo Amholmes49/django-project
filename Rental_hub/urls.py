@@ -9,8 +9,8 @@ urlpatterns = [
     path('tenants/<int:pk>', views.tenant_detail, name='tenant_detail'),
     path('properties/new', views.property_create, name='property_create'),
     path('tenants/new', views.tenant_create, name='tenant_create'),
-    # path('artists/<int:pk>/edit', views.artist_edit, name='artist_edit'),
-    # path('songs/<int:pk>/edit', views.song_edit, name='song_edit'),
+    path('tenants/<int:pk>/edit', views.tenant_edit, name='tenant_edit'),
+    path('properties/<int:pk>/edit', views.property_edit, name='property_edit'),
     # path('artists/<int:pk>/delete', views.artist_delete, name='artist_delete'),
     # path('songs/<int:pk>/delete', views.song_delete, name='song_delete')
 ]

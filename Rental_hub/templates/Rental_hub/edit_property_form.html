@@ -1,7 +1,10 @@
 {% extends 'Rental_hub/base.html' %}
 
 {% block content %}
-<h1>New Property</h1>
+<h1>Property Edit</h1>
+
+<img src="{{ property.photo_url }}" alt="" class="property-photo">
+
 <form method="POST" class="song-form">
     {% csrf_token %}
     {{ form.as_p }}
