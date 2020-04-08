@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Rental_hub'
+    'Rental_hub',
+    'phone_field',   
 ]
 
 MIDDLEWARE = [

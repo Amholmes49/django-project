@@ -1,0 +1,14 @@
+{% extends 'Rental_hub/base.html' %}
+
+{% block content %}
+<h2>Tenants</h2>
+<ul>
+    {% for tenant in tenants %}
+    <li>
+        
+            {{ tenant.full_name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
