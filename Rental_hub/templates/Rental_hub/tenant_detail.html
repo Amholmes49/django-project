@@ -1,7 +1,8 @@
 {% extends 'Rental_hub/base.html' %}
 
 {% block content %}
-<h2>{{ tenant.full_name }} <a href=>(edit)</a></h2>
+<h2><a href="{% url 'tenant_edit' pk=tenant.pk %}">{{ tenant.full_name }} </a></h2>
+<h3>Property: {{ tenant.property_name }} </h3>
 <h3></h3>
 <a href="{% url 'tenant_delete' pk=tenant.pk %}"><button>Delete Tenant</button></a>
 

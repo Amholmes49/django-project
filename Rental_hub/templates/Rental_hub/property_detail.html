@@ -1,7 +1,7 @@
 {% extends 'Rental_hub/base.html' %}
 
 {% block content %}
-<h2>{{ property.name }} <a href="">(edit)</a></h2>
+<h2>{{ property.name }} <a href="{% url 'property_edit' pk=property.pk %}">(edit)</a></h2>
 <h4>{{ property.property_type }}</h4>
 
 <img src="{{ property.photo_url }}" alt="" class="artist-photo">
