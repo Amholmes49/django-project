@@ -3,7 +3,7 @@
 
 <head>
     <title>Rental Hub</title>
-    <link rel="stylesheet" href="{% static 'css/tunr.css' %}">
+    
 </head>
 
 <body>
@@ -13,10 +13,10 @@
         <a href="{% url 'properties_list' %}">Properties</a>
         <div class="user-info">
             {% if user.is_authenticated %} Welcome, {{ user.username }}
-            <a href="{% url 'logout' %}">Log out</a>
+            <a href="{% url 'logout' %}"><button>Log Out</button></a>
             {% else %}
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'signup' %}">Signup</a>
+            <a href="{% url 'login' %}"><button>Login</button></a>
+            <a href="{% url 'signup' %}"><button>Create Account</button></a>
             {% endif %}
           </div>
         
