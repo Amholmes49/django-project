@@ -69,7 +69,7 @@ def tenant_edit(request, pk):
         form = TenantForm(request.POST, instance=tenant)
         if form.is_valid():
             tenant = form.save()
-            return redirect('edit_tenant_detail', pk=tenant.pk)
+            return redirect('tenant_detail', pk=tenant.pk)
     else:
         form = TenantForm(instance=tenant)
     return render(request, 'Rental_hub/edit_tenant_form.html', {'form': form})

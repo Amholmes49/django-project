@@ -2,12 +2,19 @@
 
 {% block content %}
 <h2>{{ property.name }} <a href="{% url 'property_edit' pk=property.pk %}">(edit)</a></h2>
-<h4>{{ property.property_type }}</h4>
+    <h4>{{ property.property_type }}</h4>
 
-<img src="{{ property.photo_url }}" alt="" class="artist-photo">
-
+    <img src="{{ property.photo_url }}" alt="" class="artist-photo" />
 </br>
-<a href="{% url 'property_delete' pk=property.pk %}"><button>Delete Property</button></a>
-    
+    <a href="{% url 'property_delete' pk=property.pk %}"><button>Delete Property</button></a>
+<h3>Tenants</h3>
+    <ul>
+    {% for tenant in property.tenants.all %}
+
+    <li>
+        <a href="">{{ tenant.full_name }}</a>
+  
+    </li>
+    {% endfor %}
 </ul>
 {% endblock %}

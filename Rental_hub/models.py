@@ -25,7 +25,7 @@ class Property(models.Model):
         return self.name
 
 class Tenant(models.Model):
-    property_name = models.ForeignKey(Property, on_delete=models.PROTECT, related_name='tenants')
+    property_name = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='tenants')
     full_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=200)
     phone = PhoneField(max_length=20)
