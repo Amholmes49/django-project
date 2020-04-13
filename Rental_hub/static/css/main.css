@@ -3,13 +3,19 @@ body {
     max-width: 50em;
     margin: auto;
     padding: 2em 1em;
+    background-color: silver;
+    
 }
-
+.header {
+    background-color: red;
+    padding: 25px;
+}
 nav a {
     border: 1px solid black;
     margin: .5em;
     padding: .5em;
     background-color: #eeeeee;
+
 }
 
 nav a:hover {

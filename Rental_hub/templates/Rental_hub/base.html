@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div class="header">
     <h1>Rental Hub</h1>
     <nav>
         <a href="{% url 'tenant_list' %}">Tenants</a>
@@ -22,6 +23,7 @@
           </div>
         
     </nav>
+    </div>
     {% block content %}
     {% endblock %}
 </body>
